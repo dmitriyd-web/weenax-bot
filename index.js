@@ -18,5 +18,5 @@ bot.on('text', (ctx) => {
     //return ctx.reply(`Ваше сообщение: ${text} \nВаше имя: ${name}`);
     return ctx.telegram.sendMessage('414775835', `Нвое сообщение от ${name} \nСодержание: ${text}`);
 })
-
+bot.launch();
 console.log('Бот запущен');
