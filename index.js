@@ -15,6 +15,4 @@ bot.on('text', (ctx) => {
     return ctx.telegram.sendMessage('414775835', `Нвое сообщение от ${name} \nСодержание: ${text}`);
 })
 
-// Enable graceful stop
-process.once('SIGINT', () => bot.stop('SIGINT'));
-process.once('SIGTERM', () => bot.stop('SIGTERM'));
+console.log('Бот запущен');
