@@ -12,7 +12,8 @@ bot.on('text', (ctx) => {
     const text = ctx.message.text;
     const name = ctx.message.from.first_name;
     //return ctx.reply(`Ваше сообщение: ${text} \nВаше имя: ${name}`);
-    return ctx.telegram.sendMessage('414775835', `Нвое сообщение от ${name} \nСодержание: ${text}`);
+    //return ctx.telegram.sendMessage('414775835', `Нвое сообщение от ${name} \nСодержание: ${text}`);
+    console.log(text);
 })
 bot.launch();
 console.log('Бот запущен');
