@@ -1,3 +1,9 @@
+const PORT = process.env.PORT || 80;
+var server = app.listen(PORT, function() {
+    var host = server.address().address;
+    var port = server.address().port;
+    console.log("server is listening at http://%s:%s", host, port);
+});
 const { Telegraf } = require('telegraf');
 
 const bot = new Telegraf('5720289702:AAGeqb6UHfgodGxCvKyvCGwyHew8eLJ6bb4');
