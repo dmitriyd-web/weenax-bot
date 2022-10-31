@@ -1,4 +1,4 @@
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 8000;
 const { Telegraf } = require('telegraf');
 
 const bot = new Telegraf('5720289702:AAGeqb6UHfgodGxCvKyvCGwyHew8eLJ6bb4');
