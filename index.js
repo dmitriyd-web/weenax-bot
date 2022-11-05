@@ -1,4 +1,7 @@
-const PORT = process.listen(process.env.PORT || 5000);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
 const { Telegraf } = require('telegraf');
 
 const bot = new Telegraf('5690526740:AAEaaw_k9hqejLIAzDq9LTDahSWeLL2Aui0');
