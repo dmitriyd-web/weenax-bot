@@ -1,4 +1,4 @@
-const PORT = process.env.PORT || 8000;
+const PORT = process.listen(process.env.PORT || 5000);
 const { Telegraf } = require('telegraf');
 
 const bot = new Telegraf('5690526740:AAEaaw_k9hqejLIAzDq9LTDahSWeLL2Aui0');
@@ -6,7 +6,6 @@ bot.start((ctx) => ctx.reply('Welcome'));
 bot.help((ctx) => ctx.reply('Send me a sticker'));
 bot.on('sticker', (ctx) => ctx.reply('👍'));
 bot.hears('hi', (ctx) => ctx.reply('Hey there'));
-bot.launch();
 bot.on('text', (ctx) => {
      //const allInfo = Object.keys(ctx.messagee);
     const text = ctx.message.text;
@@ -25,4 +24,5 @@ bot.on('text', (ctx) => {
         return ctx.telegram.sendMessage('414775835', `Новое сообщение от: \nИмя: ${name}\nТекущий чат ID: ${chatId} \nСодержание: ${text}`);
     }
 })
+bot.launch();
 console.log('Бот запущен');
